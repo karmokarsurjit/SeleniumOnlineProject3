@@ -29,7 +29,7 @@ public class LoginTest {
 	
 	@Test(dependsOnMethods = "homepagetitleverify", dataProvider="loginData", dataProviderClass = LoginDataProvider.class )
 	public void logintest(List<LoginDTO> logdata) {
-		for (com.bitm.SeleniumOnlineProject3.DTO.LoginDTO login : logdata) {
+		for (LoginDTO login : logdata) {
 			driver.findElement(By.xpath(LogInModule.username)).sendKeys(login.getUsername());
 			driver.findElement(By.xpath(LogInModule.password)).sendKeys(login.getPassword());
 			driver.findElement(By.id(LogInModule.LoginBtn)).click();

@@ -21,9 +21,9 @@ public class AssignLeaveTest {
 
 	@Test(dataProvider="assignleavedata", dataProviderClass = AssignLeaveDataProvider.class)
 	public void assignLeaveTest(List<AssignLeaveDTO> assigndata) {
-		
-		for (com.bitm.SeleniumOnlineProject3.DTO.AssignLeaveDTO assignleave : assigndata) {
-			driver = DriverManager.driver;
+		driver = DriverManager.driver;
+		for (AssignLeaveDTO assignleave : assigndata) {
+			
 			driver.findElement(By.xpath(AssignLeaveModule.assignBtn)).click();
 
 			driver.findElement(By.id(AssignLeaveModule.empname)).sendKeys(assignleave.getName());
