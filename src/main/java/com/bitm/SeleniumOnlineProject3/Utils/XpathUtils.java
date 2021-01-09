@@ -20,16 +20,15 @@ public class XpathUtils {
 		public static final String fromdatebox = "assignleave_txtFromDate";
 		public static final String frommonth = "/html/body/div[3]/div/div/select[1]";
 		public static final String fromyear = "/html/body/div[3]/div/div/select[2]";
-		public static final String fromdate = "/html/body/div[3]/table/tbody/tr[2]/td[2]/a";
 		
 		public static final String todatebox = "assignleave_txtToDate";
 		public static final String tomonth = "/html/body/div[3]/div/div/select[1]";
 		public static final String toyear = "/html/body/div[3]/div/div/select[2]";
-		public static final String todate = "/html/body/div[3]/table/tbody/tr[2]/td[4]/a";
 		
 		public static final String comments = "assignleave_txtComment";
 		
 		public static final String submit = "assignBtn";
+		
 	}
 
 }

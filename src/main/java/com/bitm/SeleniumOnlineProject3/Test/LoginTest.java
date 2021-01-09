@@ -1,10 +1,14 @@
 package com.bitm.SeleniumOnlineProject3.Test;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.bitm.SeleniumOnlineProject3.DTO.LoginDTO;
+import com.bitm.SeleniumOnlineProject3.DataProvider.LoginDataProvider;
 import com.bitm.SeleniumOnlineProject3.Utils.DriverManager;
 import com.bitm.SeleniumOnlineProject3.Utils.UrlTxtUtils.URL;
 import com.bitm.SeleniumOnlineProject3.Utils.UrlTxtUtils.Text;
@@ -23,11 +27,14 @@ public class LoginTest {
 		System.out.println("Homepage Title Verified");
 	}
 	
-	@Test(dependsOnMethods = "homepagetitleverify")
-	public void logintest() {
-		driver.findElement(By.xpath(LogInModule.username)).sendKeys("Admin");
-		driver.findElement(By.xpath(LogInModule.password)).sendKeys("admin123");
-		driver.findElement(By.id(LogInModule.LoginBtn)).click();
+	@Test(dependsOnMethods = "homepagetitleverify", dataProvider="loginData", dataProviderClass = LoginDataProvider.class )
+	public void logintest(List<LoginDTO> logdata) {
+		for (com.bitm.SeleniumOnlineProject3.DTO.LoginDTO login : logdata) {
+			driver.findElement(By.xpath(LogInModule.username)).sendKeys(login.getUsername());
+			driver.findElement(By.xpath(LogInModule.password)).sendKeys(login.getPassword());
+			driver.findElement(By.id(LogInModule.LoginBtn)).click();
+		}
+		
 		System.out.println("Logged in Successfully");
 		
 	}
