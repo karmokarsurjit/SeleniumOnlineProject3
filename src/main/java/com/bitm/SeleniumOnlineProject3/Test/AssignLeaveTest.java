@@ -8,24 +8,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.bitm.SeleniumOnlineProject3.DTO.AssignLeaveDTO;
 import com.bitm.SeleniumOnlineProject3.DataProvider.AssignLeaveDataProvider;
 import com.bitm.SeleniumOnlineProject3.Utils.DriverManager;
+import com.bitm.SeleniumOnlineProject3.Utils.TestNGReporting;
 import com.bitm.SeleniumOnlineProject3.Utils.XpathUtils.AssignLeaveModule;
-
+@Listeners(TestNGReporting.class)
 public class AssignLeaveTest {
 
 	private WebDriver driver = null;
 
 	@Test(dataProvider="assignleavedata", dataProviderClass = AssignLeaveDataProvider.class)
 	public void assignLeaveTest(List<AssignLeaveDTO> assigndata) {
-		driver = DriverManager.driver;
 		for (AssignLeaveDTO assignleave : assigndata) {
 			
+			driver = DriverManager.driver;
 			driver.findElement(By.xpath(AssignLeaveModule.assignBtn)).click();
-
 			driver.findElement(By.id(AssignLeaveModule.empname)).sendKeys(assignleave.getName());
 
 			Select leaveType = new Select(driver.findElement(By.xpath(AssignLeaveModule.leavetype)));
@@ -59,7 +60,7 @@ public class AssignLeaveTest {
 				}
 			}
 
-			driver.findElement(By.id(AssignLeaveModule.comments)).sendKeys(assignleave.gatComments());
+			driver.findElement(By.id(AssignLeaveModule.comments)).sendKeys(assignleave.getComments());
 
 			WebDriverWait wait = new WebDriverWait(driver, 20);
 			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(AssignLeaveModule.submit)));

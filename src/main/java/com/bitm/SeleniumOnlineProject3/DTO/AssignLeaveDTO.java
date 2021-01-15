@@ -13,7 +13,7 @@ public class AssignLeaveDTO {
 		this.name = name;
 	}
 
-	public String gatComments() {
+	public String getComments() {
 		return comments;
 	}
 

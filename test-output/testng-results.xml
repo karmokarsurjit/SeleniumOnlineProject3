@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="4" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="17420" started-at="2021-01-09T19:27:08 BDT" finished-at="2021-01-09T19:27:26 BDT">
+  <suite name="SeleniumOnlineProject3" duration-ms="44412" started-at="2021-01-15T19:30:08 BDT" finished-at="2021-01-15T19:30:52 BDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="17420" started-at="2021-01-09T19:27:08 BDT" finished-at="2021-01-09T19:27:26 BDT">
+    <test name="LoginModule" duration-ms="38304" started-at="2021-01-15T19:30:08 BDT" finished-at="2021-01-15T19:30:46 BDT">
       <class name="com.bitm.SeleniumOnlineProject3.Test.LoginTest">
-        <test-method status="PASS" signature="homepagetitleverify()[pri:0, instance:com.bitm.SeleniumOnlineProject3.Test.LoginTest@7d0587f1]" name="homepagetitleverify" duration-ms="11343" started-at="2021-01-09T19:27:09 BDT" finished-at="2021-01-09T19:27:20 BDT">
+        <test-method status="PASS" signature="homepagetitleverify()[pri:0, instance:com.bitm.SeleniumOnlineProject3.Test.LoginTest@130f889]" name="homepagetitleverify" duration-ms="21827" started-at="2021-01-15T19:30:08 BDT" finished-at="2021-01-15T19:30:30 BDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- homepagetitleverify -->
-        <test-method status="PASS" signature="logintest(java.util.List)[pri:0, instance:com.bitm.SeleniumOnlineProject3.Test.LoginTest@7d0587f1]" name="logintest" duration-ms="4891" started-at="2021-01-09T19:27:21 BDT" data-provider="loginData" depends-on-methods="com.bitm.SeleniumOnlineProject3.Test.LoginTest.homepagetitleverify" finished-at="2021-01-09T19:27:26 BDT">
+        <test-method status="PASS" signature="logintest(java.util.List)[pri:0, instance:com.bitm.SeleniumOnlineProject3.Test.LoginTest@130f889]" name="logintest" duration-ms="15639" started-at="2021-01-15T19:30:31 BDT" data-provider="loginData" depends-on-methods="com.bitm.SeleniumOnlineProject3.Test.LoginTest.homepagetitleverify" finished-at="2021-01-15T19:30:46 BDT">
           <params>
             <param index="0">
               <value>
@@ -23,6 +23,54 @@
           </reporter-output>
         </test-method> <!-- logintest -->
       </class> <!-- com.bitm.SeleniumOnlineProject3.Test.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- LoginModule -->
+    <test name="AssignLeaveModule" duration-ms="6077" started-at="2021-01-15T19:30:46 BDT" finished-at="2021-01-15T19:30:52 BDT">
+      <class name="com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest">
+        <test-method status="PASS" signature="dmanager()[pri:0, instance:com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest@1176dcec]" name="dmanager" duration-ms="5723" started-at="2021-01-15T19:30:46 BDT" finished-at="2021-01-15T19:30:52 BDT">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- dmanager -->
+        <test-method status="FAIL" signature="assignLeaveTest(java.util.List)[pri:0, instance:com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest@1176dcec]" name="assignLeaveTest" duration-ms="0" started-at="2021-01-15T19:30:52 BDT" data-provider="assignleavedata" depends-on-methods="com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest.dmanager" finished-at="2021-01-15T19:30:52 BDT">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Method public void com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest.assignLeaveTest(java.util.List) requires a @DataProvider named : assignleavedata in class com.bitm.SeleniumOnlineProject3.DataProvider.AssignLeaveDataProvider]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Method public void com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest.assignLeaveTest(java.util.List) requires a @DataProvider named : assignleavedata in class com.bitm.SeleniumOnlineProject3.DataProvider.AssignLeaveDataProvider
+at org.testng.internal.Parameters.findDataProvider(Parameters.java:559)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:772)
+at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
+at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
+at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:789)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assignLeaveTest -->
+      </class> <!-- com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest -->
+    </test> <!-- AssignLeaveModule -->
+  </suite> <!-- SeleniumOnlineProject3 -->
 </testng-results>

@@ -5,6 +5,7 @@
     <classes>
       <class name="com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest">
         <methods>
+          <include name="dmanager"/>
           <include name="assignLeaveTest"/>
         </methods>
       </class> <!-- com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest -->

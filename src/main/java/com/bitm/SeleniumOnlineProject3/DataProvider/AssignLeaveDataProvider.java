@@ -6,7 +6,7 @@ import com.bitm.SeleniumOnlineProject3.Utils.ExcelUtils;
 
 public class AssignLeaveDataProvider {
 
-	@DataProvider(name = "assignleaveData")
+	@DataProvider(name = "assignleavedata")
 	public static Object[][] getLoginData() {
 		try {
 			return new Object[][] { { ExcelUtils.getAssignLeaveData() }, };
