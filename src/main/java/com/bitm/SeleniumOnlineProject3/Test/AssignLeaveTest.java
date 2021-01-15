@@ -61,12 +61,11 @@ public class AssignLeaveTest {
 			}
 
 			driver.findElement(By.id(AssignLeaveModule.comments)).sendKeys(assignleave.getComments());
-
+			
 			WebDriverWait wait = new WebDriverWait(driver, 20);
-			wait.until(ExpectedConditions.elementToBeClickable(By.xpath(AssignLeaveModule.submit)));
+			wait.until(ExpectedConditions.elementToBeClickable(By.id(AssignLeaveModule.submit)));
 			driver.findElement(By.id(AssignLeaveModule.submit)).click();
 		}
-		
 		System.out.println("Assign Leave Test Successful");
 	}
 

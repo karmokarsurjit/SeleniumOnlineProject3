@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-SeleniumOnlineProject3">
-              <span class="suite-name border-failed">SeleniumOnlineProject3</span>
+              <span class="suite-name border-passed">SeleniumOnlineProject3</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-SeleniumOnlineProject3" class="hide-methods failed suite-SeleniumOnlineProject3"> (hide)</a> <!-- hide-methods failed suite-SeleniumOnlineProject3 -->
-                      <a href="#" panel-name="suite-SeleniumOnlineProject3" class="show-methods failed suite-SeleniumOnlineProject3"> (show)</a> <!-- show-methods failed suite-SeleniumOnlineProject3 -->
-                    </span>
-                    <div class="method-list-content failed suite-SeleniumOnlineProject3">
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SeleniumOnlineProject3" title="com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest" hash-for-method="assignLeaveTest">assignLeaveTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-SeleniumOnlineProject3 -->
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -118,7 +104,7 @@
                     <div class="method-list-content passed suite-SeleniumOnlineProject3">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-SeleniumOnlineProject3" title="com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest" hash-for-method="dmanager">dmanager</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-SeleniumOnlineProject3" title="com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest" hash-for-method="assignLeaveTest([AssignLeaveDTO [name=Odis Adalwin, comments=None]])">assignLeaveTest([AssignLeaveDTO [name=Odis Adalwin, comments=None]])</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -143,26 +129,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-SeleniumOnlineProject3" class="panel SeleniumOnlineProject3">
-          <div class="suite-SeleniumOnlineProject3-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="assignLeaveTest">
-                  </a> <!-- assignLeaveTest -->
-                  <span class="method-name">assignLeaveTest</span>
-                  <div class="stack-trace">org.testng.TestNGException: 
-Method public void com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest.assignLeaveTest(java.util.List) requires a @DataProvider named : assignleavedata in class com.bitm.SeleniumOnlineProject3.DataProvider.AssignLeaveDataProvider
-	at java.util.ArrayList.forEach(ArrayList.java:1257)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-SeleniumOnlineProject3-class-failed -->
           <div class="suite-SeleniumOnlineProject3-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -194,9 +160,10 @@ Method public void com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest.assignLe
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="dmanager">
-                  </a> <!-- dmanager -->
-                  <span class="method-name">dmanager</span>
+                  <a name="assignLeaveTest([AssignLeaveDTO [name=Odis Adalwin, comments=None]])">
+                  </a> <!-- assignLeaveTest([AssignLeaveDTO [name=Odis Adalwin, comments=None]]) -->
+                  <span class="method-name">assignLeaveTest</span>
+                  <span class="parameters">([AssignLeaveDTO [name=Odis Adalwin, comments=None]])</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -261,28 +228,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'homepagetitleverify')
 data.setCell(0, 2, 'com.bitm.SeleniumOnlineProject3.Test.LoginTest')
-data.setCell(0, 3, 21827);
+data.setCell(0, 3, 25626);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'logintest')
 data.setCell(1, 2, 'com.bitm.SeleniumOnlineProject3.Test.LoginTest')
-data.setCell(1, 3, 15639);
+data.setCell(1, 3, 13091);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'dmanager')
+data.setCell(2, 1, 'assignLeaveTest')
 data.setCell(2, 2, 'com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest')
-data.setCell(2, 3, 5723);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'assignLeaveTest')
-data.setCell(3, 2, 'com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest')
-data.setCell(3, 3, 0);
+data.setCell(2, 3, 8853);
 window.suiteTableData['SeleniumOnlineProject3']= { tableData: data, tableDiv: 'times-div-SeleniumOnlineProject3'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 43 seconds</span>
+              <span class="suite-total-time">Total running time: 47 seconds</span>
               <div id="times-div-SeleniumOnlineProject3">
               </div> <!-- times-div-SeleniumOnlineProject3 -->
             </div> <!-- times-div -->
@@ -315,14 +278,14 @@ return data;
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">logintest([LoginDTO [username=Admin, password=admin123]])</span>
-                <span class="method-start">22624 ms</span>
+                <span class="method-start">27036 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.bitm.SeleniumOnlineProject3.Test.AssignLeaveTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">dmanager</span>
-                <span class="method-start">38302 ms</span>
+                <span class="method-name">assignLeaveTest([AssignLeaveDTO [name=Odis Adalwin, comments=None]])</span>
+                <span class="method-start">40569 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

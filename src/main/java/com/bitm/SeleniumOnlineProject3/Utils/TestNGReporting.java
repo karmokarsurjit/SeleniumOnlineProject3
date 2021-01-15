@@ -27,6 +27,17 @@ public class TestNGReporting implements ITestListener{
 	public void onTestSuccess(ITestResult result)
 	{
 		System.out.println("Test has been Successfull : " + result.getName());
+		driver=DriverManager.driver;
+		File srcfile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	    File desfile= new File("C:\\Users\\karmo\\OneDrive\\Desktop\\Selenium\\"+result.getName()+"_Success.png");
+	    
+	    try {
+			FileHandler.copy(srcfile, desfile);
+		} catch (Exception e) {
+		  e.printStackTrace();
+		}
+	    
+	    System.out.println("Screenshot of failed page has been taken!");
 	}
 	public void onTestFailure(ITestResult result)
 	{
@@ -34,7 +45,7 @@ public class TestNGReporting implements ITestListener{
 		
 		driver=DriverManager.driver;
 		File srcfile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	    File desfile= new File("C:\\Users\\karmo\\OneDrive\\Desktop\\Selenium\\selenium.png");
+	    File desfile= new File("C:\\Users\\karmo\\OneDrive\\Desktop\\Selenium\\"+result.getName()+"_Success.png");
 	    
 	    try {
 			FileHandler.copy(srcfile, desfile);
