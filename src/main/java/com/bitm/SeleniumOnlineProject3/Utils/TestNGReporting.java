@@ -45,7 +45,7 @@ public class TestNGReporting implements ITestListener{
 		
 		driver=DriverManager.driver;
 		File srcfile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-	    File desfile= new File("C:\\Users\\karmo\\OneDrive\\Desktop\\Selenium\\"+result.getName()+"_Success.png");
+	    File desfile= new File("C:\\Users\\karmo\\OneDrive\\Desktop\\Selenium\\"+result.getName()+"_Failed.png");
 	    
 	    try {
 			FileHandler.copy(srcfile, desfile);
